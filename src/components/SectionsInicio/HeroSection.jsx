@@ -25,14 +25,14 @@ const HeroSection = () => {
           {isSesionActive ? (
             <a
               href="/marketplace"
-              className="whitespace-nowrap bg-[#4E9408] rounded-lg py-3 px-6 duration-200 text-white hover:bg-[#3dc214] shadow-lg transform hover:scale-105 transition-transform"
+              className="whitespace-nowrap bg-[#4E9408] rounded-lg py-3 px-6 duration-200 text-white hover:bg-[#3d5f33] shadow-lg transform hover:scale-105 transition-transform"
             >
               Contratar un servicio
             </a>
           ) : (
             <a
               href="/loginregistro?form=register"
-              className="whitespace-nowrap bg-[#4E9408] rounded-lg py-3 px-6 duration-200 text-white hover:bg-[#3dc214] shadow-lg transform hover:scale-105 transition-transform"
+              className="whitespace-nowrap bg-[#4E9408] rounded-lg py-3 px-6 duration-200 text-white hover:bg-[#3d5f33] shadow-lg transform hover:scale-105 transition-transform"
             >
               Contratar un servicio
             </a>

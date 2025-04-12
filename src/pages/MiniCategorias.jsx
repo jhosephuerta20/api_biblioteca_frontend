@@ -30,7 +30,7 @@ const CategoriasDestacadas = () => {
     <section className="bg-gray-50 py-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl font-bold text-[#213660] mb-4">
             Explora Nuestros Servicios Destacados
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -61,7 +61,7 @@ const CategoriasDestacadas = () => {
         <div className="text-center mt-10">
           <Link
             to="/categorias"
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors text-lg font-semibold shadow-md hover:shadow-lg"
+            className="inline-block bg-[#4E9408] text-white px-8 py-3 rounded-full hover:bg-[#3d5f33] transition-colors text-lg font-semibold shadow-md hover:shadow-lg"
           >
             Ver Todos los servicios
           </Link>
