@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { RegionesComunas } from "../../utils/RegionesComunas";
+
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { categorias } from "../../utils/Categorias";
 import DropdownFilter from "./DropdownFilter";
@@ -47,7 +47,7 @@ const SearchFilter = ({
             <MagnifyingGlassIcon className="h-5 w-5 text-gray-500" />
             <input
               type="text"
-              placeholder="Buscar servicio"
+              placeholder="Buscar libro"
               value={filters.searchProduct}
               onChange={(e) => {
                 setFilters((prev) => ({
@@ -62,11 +62,11 @@ const SearchFilter = ({
         )}
         <div className="flex-1 space-y-3 overflow-y-auto">
           <div className="border-b pb-3 border-gray-200 relative">
-            <label className="block mb-2">Ubicación</label>
+            <label className="block mb-2">Autor</label>
             <input
               type="text"
               className="w-full p-2 border rounded-lg"
-              placeholder="Busca por distrito..."
+              placeholder="Busca por autor..."
               value={filters.comuna}
               onChange={(e) => {
                 handleChange("comuna", e.target.value);
@@ -136,7 +136,7 @@ const SearchFilter = ({
                   filters.estado === "Nuevo" ? "bg-gray-400" : ""
                 }`}
               >
-                Nuevo
+                Recomendado
               </button>
               <button
                 type="button"
@@ -145,7 +145,7 @@ const SearchFilter = ({
                   filters.estado === "Usado" ? "bg-gray-400" : ""
                 }`}
               >
-                Usado
+                Tendencia
               </button>
               <button
                 type="button"
@@ -154,7 +154,7 @@ const SearchFilter = ({
                   !filters.estado ? "bg-gray-400" : ""
                 }`}
               >
-                Todos
+                Promoción
               </button>
             </div>
           </div>

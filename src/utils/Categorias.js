@@ -1,10 +1,9 @@
 export const categorias = [
-  "veterinaria",
-  "mantenimiento",
-  "reparación",
-  "instalaciones",
-  "remodelación",
-  "electricistas",
-  "jardinería",
-  "mudanzas",
+  "Ficción",
+  "Autoayuda",
+  "Negocios y Finanzas",
+  "Tecnología y Programación",
+  "Ciencia",
+  "Arte y Diseño",
+  "Historia",
 ];

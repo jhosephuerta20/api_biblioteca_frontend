@@ -7,7 +7,7 @@ const Perfil = () => {
     <>
       <NavBar />
       <PerfilUsuario />
-      <Footer/>
+      <Footer />
     </>
   );
 };

@@ -120,10 +120,10 @@ const ArtsPopulares = () => {
     <div className="bg-gray-100 py-10">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-bold text-center mb-6">
-          Descubre los Servicios más Recientes
+          Descubre los Libros más Recientes
         </h1>
         <p className="text-gray-600 text-center mb-10">
-          ¡Empieza a explorar ahora mismo para descubrir los servicios más
+          ¡Empieza a explorar ahora mismo para descubrir los libros más
           recientes y útiles para ti!
         </p>
 
@@ -140,7 +140,7 @@ const ArtsPopulares = () => {
             ))
           ) : (
             <div className="col-span-full text-center text-gray-500">
-              No hay servicios disponibles
+              No hay libros disponibles
             </div>
           )}
         </div>

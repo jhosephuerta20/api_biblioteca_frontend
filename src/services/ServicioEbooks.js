@@ -25,5 +25,3 @@ export async function agregarTrueque(productoInteresado, productoPublicador) {
     console.log(error);
   }
 }
-
-

@@ -17,11 +17,11 @@ import { useEffect, useState } from "react";
 import Warning from "../components/Warning";
 import Footer from "../components/NavbarFooter/Footer";
 import FormProducto from "../components/Producto/FormProducto";
-import { agregarTrueque } from "../services/ServicioTrueques";
+import { agregarTrueque } from "../services/ServicioEbooks";
 import { useUser } from "../hooks/useUser";
 
 export async function loader({ params }) {
-  console.log(params)
+  console.log(params);
   console.log(params.id);
   if (params.id !== undefined) {
     const product = await obtenerProductoPorId(params.id);
@@ -66,9 +66,7 @@ const DetalleProducto = () => {
   };
 
   const handleClickUpload = async () => {
-    const productos = await obtenerProductosPorUsuario(
-      +user.id
-    );
+    const productos = await obtenerProductosPorUsuario(+user.id);
     setDataProducts(productos);
     setIsGuardarProductos(true);
   };
@@ -95,7 +93,9 @@ const DetalleProducto = () => {
             className="absolute z-40 w-full h-full bg-black opacity-50"
           ></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-white rounded-lg p-3 ">
-            <h2 className="text-xl font-normal text-center mb-5">Selecciona una opción</h2>
+            <h2 className="text-xl font-normal text-center mb-5">
+              Selecciona una opción
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <button
                 onClick={() => handleClickUpload()}
@@ -285,7 +285,6 @@ const DetalleProducto = () => {
                         Ver perfil
                       </button>
                     )}
-                    
                   </div>
                 </div>
               </div>
@@ -293,13 +292,12 @@ const DetalleProducto = () => {
               <div className="mt-5">
                 {user && +user.id !== product.usuario.id && (
                   <button
-                  onClick={() => handleClickSolicitar()}
-                  className="w-full p-2 rounded-full bg-slate-950 hover:bg-slate-800 text-white cursor-pointer"
-                >
-                  Solicitar trueque
-                </button>
+                    onClick={() => handleClickSolicitar()}
+                    className="w-full p-2 rounded-full bg-slate-950 hover:bg-slate-800 text-white cursor-pointer"
+                  >
+                    Solicitar trueque
+                  </button>
                 )}
-                
               </div>
             </div>
           </div>
@@ -311,4 +309,3 @@ const DetalleProducto = () => {
 };
 
 export default DetalleProducto;
-

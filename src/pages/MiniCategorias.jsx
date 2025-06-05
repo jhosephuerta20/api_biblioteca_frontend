@@ -2,23 +2,23 @@ import { Link } from "react-router-dom";
 
 const categorias = [
   {
-    nombre: "Limpieza",
-    emoji: "🧽",
+    nombre: "Aventuras",
+    emoji: "🧙‍♂️",
     ruta: "/marketplace?categoria=limpieza",
   },
   {
-    nombre: "Jardinería",
-    emoji: "🪴",
+    nombre: "Terror",
+    emoji: "👻",
     ruta: "/marketplace?categoria=jardinería",
   },
   {
-    nombre: "Veterinaria",
-    emoji: "👩‍⚕️",
+    nombre: "Ficción",
+    emoji: "🤖",
     ruta: "/marketplace?categoria=veterinaria",
   },
   {
-    nombre: "Reparaciones",
-    emoji: "🏠",
+    nombre: "Informatica",
+    emoji: "👨‍💻",
     ruta: "/marketplace?categoria=reparación",
   },
 ];
@@ -31,11 +31,11 @@ const CategoriasDestacadas = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-[#213660] mb-4">
-            Explora Nuestros Servicios Destacados
+            Explora Nuestros Libros Destacados
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Déjate sorprender por una amplia gama de opciones para el cuidado de
-            tu hogar
+            Déjate sorprender por un amplio catálogo de libros para tu colección
+            personal
           </p>
         </div>
 
@@ -63,7 +63,7 @@ const CategoriasDestacadas = () => {
             to="/categorias"
             className="inline-block bg-[#4E9408] text-white px-8 py-3 rounded-full hover:bg-[#3d5f33] transition-colors text-lg font-semibold shadow-md hover:shadow-lg"
           >
-            Ver Todos los servicios
+            Ver Todos los libros
           </Link>
         </div>
       </div>

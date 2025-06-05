@@ -35,7 +35,7 @@ const MenuItems = () => (
       to="/marketplace"
       className="hover:scale-105 text-lg duration-100 ease-in-out cursor-pointer"
     >
-      Servicios
+      Libros
     </Link>
     <a
       href="/#como-funciona"
@@ -141,7 +141,7 @@ const NavBar = () => {
     <nav className="bg-white w-full">
       <div className="flex items-center justify-between p-4 lg:pe-6 lg:ps-6">
         <h1 className="text-xl lg:text-3xl font-bold text-black font-mono">
-          <a href="/">MultiServi</a>
+          <a href="/">Letras Vivas</a>
         </h1>
 
         <div className="hidden xl:flex justify-between gap-5 font-medium">

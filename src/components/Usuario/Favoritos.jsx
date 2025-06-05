@@ -109,7 +109,7 @@ const Favoritos = () => {
       <NavBar />
       <div className="container mx-auto px-4 py-8 min-h-screen">
         <h2 className="text-3xl font-extrabold text-center text-black mb-8">
-          Tus Servicios Favoritos
+          Tus Libros Favoritos
         </h2>
 
         <div className="flex flex-col sm:flex-row justify-between mb-6 space-y-4 sm:space-y-0">
@@ -168,7 +168,7 @@ const Favoritos = () => {
           </div>
         ) : (
           <p className="text-center text-gray-500 text-xl">
-            Aún no has agregado servicios a favoritos
+            Aún no has agregado libros a favoritos
           </p>
         )}
       </div>

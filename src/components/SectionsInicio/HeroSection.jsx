@@ -11,14 +11,16 @@ const HeroSection = () => {
       <div className="flex flex-col lg:pe-4 gap-5 lg:gap-10 box-border">
         <div>
           <h1 className="text-4xl md:text-6xl font-bold text-[#213660]">
-            Multiservi tu Plataforma de Confianza para Servicios Domésticos
+            Letras Vivas tu Plataforma de Confianza para comprar Libros
+            electronicos
           </h1>
         </div>
         <div>
           <p className="text-sm lg:text-xl">
-            Conectamos a usuarios como tú con profesionales confiables. Explora,
-            contrata y disfruta de servicios de calidad en un solo lugar.¡Haz
-            que tu vida sea más fácil con <strong>Multiservi </strong>!
+            Conectamos a lectores como tú con el conocimiento que buscas.
+            Explora, accede y disfruta de libros y recursos digitales en un solo
+            lugar.
+            <strong>Letras Vivas </strong>!
           </p>
         </div>
         <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
@@ -27,14 +29,14 @@ const HeroSection = () => {
               href="/marketplace"
               className="whitespace-nowrap bg-[#4E9408] rounded-lg py-3 px-6 duration-200 text-white hover:bg-[#3d5f33] shadow-lg transform hover:scale-105 transition-transform"
             >
-              Contratar un servicio
+              Comprar un libro
             </a>
           ) : (
             <a
               href="/loginregistro?form=register"
               className="whitespace-nowrap bg-[#4E9408] rounded-lg py-3 px-6 duration-200 text-white hover:bg-[#3d5f33] shadow-lg transform hover:scale-105 transition-transform"
             >
-              Contratar un servicio
+              Comprar un libro
             </a>
           )}
           <a

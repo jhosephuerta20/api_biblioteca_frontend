@@ -3,7 +3,6 @@ import {
   EnvelopeIcon,
   LockClosedIcon,
   UserIcon,
-  MapPinIcon,
 } from "@heroicons/react/24/solid";
 
 import { useForm } from "react-hook-form";
@@ -13,15 +12,13 @@ import { useSearchParams } from "react-router-dom";
 
 import { agregarUsuario, iniciarSesion } from "../services/ServicioUsuarios";
 
-import { RegionesComunas } from "../utils/RegionesComunas";
+
 import Warning from "../components/Warning";
 
 const registroSchema = yup.object({
   nombre: yup.string().required("Nombre es requerido"),
   apellido: yup.string().required("Apellido es requerido"),
   email: yup.string().email("Email inválido").required("Email es requerido"),
-  region: yup.string().required("Selecciona una región"),
-  comuna: yup.string().required("Selecciona una comuna"),
   password: yup
     .string()
     .min(8, "Mínimo 8 caracteres")
@@ -61,7 +58,7 @@ const LoginRegistro = () => {
     password: "",
   });
 
-  const selectedRegion = watch("region");
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -110,7 +107,7 @@ const LoginRegistro = () => {
           href="/"
           className="ext-xl lg:text-3xl font-bold text-black font-mono decoration-none"
         >
-          MultiServi
+          Letras Vivas
         </a>
       </nav>
       {warning && <Warning tipo={warning} />}
@@ -266,66 +263,7 @@ const LoginRegistro = () => {
                   </p>
                 )}
 
-                <div className="relative">
-                  <MapPinIcon className="w-5 h-5 text-gray-500 absolute left-3 top-1/2 -translate-y-1/2" />
-                  <select
-                    {...registerRegistro("region")}
-                    className={`p-2 pl-10 border rounded-md w-full ${
-                      registroErrors.region
-                        ? "border-red-500"
-                        : "border-gray-400"
-                    }`}
-                  >
-                    <option value="">Seleccione su distrito</option>
-                    {RegionesComunas.map(({ region }) => (
-                      <option key={region} value={region}>
-                        {region}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                {registroErrors.region && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {registroErrors.region.message}
-                  </p>
-                )}
-
-                <div className="relative">
-                  <MapPinIcon className="w-5 h-5 text-gray-500 absolute left-3 top-1/2 -translate-y-1/2" />
-
-                  {/*
-                  Menu desplegable
-                   <select
-                    {...registerRegistro("comuna")}
-                    className={`p-2 pl-10 border rounded-md w-full ${
-                      registroErrors.comuna
-                        ? "border-red-500"
-                        : "border-gray-400"
-                    }`}
-                    disabled={!selectedRegion}
-                  >
-                    <option value="">Ingrese su dirección</option>
-                    {selectedRegion &&
-                      RegionesComunas.find(
-                        (r) => r.region === selectedRegion
-                      )?.comunas.map((comuna) => (
-                        <option key={comuna} value={comuna}>
-                          {comuna}
-                        </option>
-                      ))}
-                  </select> */}
-                  <input
-                    type="text"
-                    {...registerRegistro("comuna")}
-                    className={`p-2 pl-10 border rounded-md w-full ${
-                      registroErrors.comuna
-                        ? "border-red-500"
-                        : "border-gray-400"
-                    }`}
-                    placeholder="Ingrese su dirección"
-                    disabled={!selectedRegion}
-                  />
-                </div>
+                
 
                 {registroErrors.comuna && (
                   <p className="text-red-500 text-sm mt-1">

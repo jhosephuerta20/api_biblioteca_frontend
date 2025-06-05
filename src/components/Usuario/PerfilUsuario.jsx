@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { TrashIcon } from "@heroicons/react/24/solid";
-import { RegionesComunas } from "../../utils/RegionesComunas";
+
 import FormProducto from "../Producto/FormProducto";
 import { eliminarProducto } from "../../services/ServicioProductos";
 import { ChatBubbleLeftRightIcon } from "@heroicons/react/24/outline";
@@ -360,7 +360,7 @@ const PerfilUsuario = () => {
             <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-lg">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-xl font-bold text-blue-600">
-                  Mis Servicios Solicitados
+                  Mis libros Solicitados
                 </h2>
 
                 <button
@@ -406,9 +406,7 @@ const PerfilUsuario = () => {
 
             <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-lg">
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-xl font-bold text-blue-600">
-                  Mis Servicios
-                </h2>
+                <h2 className="text-xl font-bold text-blue-600">Mis Libros</h2>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4">

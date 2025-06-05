@@ -6,9 +6,9 @@ import {
 } from "@heroicons/react/24/solid";
 import { categorias } from "../../utils/Categorias";
 import { crearProducto } from "../../services/ServicioProductos";
-import { agregarTrueque } from "../../services/ServicioTrueques";
+import { agregarTrueque } from "../../services/ServicioEbooks";
 
-const CLOUDINARY_UPLOAD_PRESET = "MultiServi";
+const CLOUDINARY_UPLOAD_PRESET = "Letras Vivas";
 const CLOUDINARY_CLOUD_NAME = "dihjozfv0";
 const FormProducto = ({ setIsModalProduct, tipo, product }) => {
   const [formData, setFormData] = useState({

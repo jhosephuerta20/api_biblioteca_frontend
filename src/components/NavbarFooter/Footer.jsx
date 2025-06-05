@@ -19,7 +19,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="text-center text-xs font-mono">
-        <p>©MultiServi 2025</p>
+        <p>©LetrasVivas 2025</p>
       </div>
     </div>
   );
