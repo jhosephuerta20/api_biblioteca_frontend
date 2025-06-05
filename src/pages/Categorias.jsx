@@ -5,7 +5,7 @@ const categorias = [
   {
     id: 1,
     nombre: "Ficción",
-    emoji: "🦸‍♀️",
+    emoji: "🦸",
     ruta: "/marketplace?categoria=veterinaria",
   },
   {
@@ -56,11 +56,11 @@ const Categorias = () => {
           Explora nuestras categorías
         </h2>
         <p className="text-center text-lg text-gray-600 mt-4">
-          Descubre productos de tus categorías favoritas.
+          Descubre libros de tus categorías favoritas.
         </p>
       </div>
 
-      <div className="py-12 px-6 lg:px-16">
+      <div className="py-12 px-6 lg:px-16 min-h-screen">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
           {categorias.map((categoria) => (
             <a
