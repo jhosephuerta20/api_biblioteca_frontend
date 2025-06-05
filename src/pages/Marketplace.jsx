@@ -27,8 +27,6 @@ const Marketplace = () => {
     category: filtroCategoria ? [filtroCategoria] : [],
     priceFrom: "",
     priceTo: "",
-    estado: "",
-    comuna: "",
   });
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -87,14 +85,6 @@ const Marketplace = () => {
           (!filtered.priceFrom || price >= Number(filtered.priceFrom)) &&
           (!filtered.priceTo || price <= Number(filtered.priceTo));
 
-        const matchesComuna = filtered.comuna
-          ? producto.usuario.comuna.toLowerCase() ===
-            filtered.comuna.toLowerCase()
-          : true;
-
-        const matchesEstado = filtered.estado
-          ? producto.estado.toLowerCase() === filtered.estado.toLowerCase()
-          : true;
 
         const matchesCategory =
           filtered.category.length > 0
@@ -106,8 +96,6 @@ const Marketplace = () => {
         return (
           matchesSearch &&
           matchesPrice &&
-          matchesComuna &&
-          matchesEstado &&
           matchesCategory
         );
       });
@@ -195,9 +183,6 @@ const Marketplace = () => {
                 nombre={producto.titulo}
                 precio={producto.valor_referencia}
                 imagenes={producto.imagenes}
-                region={producto.usuario.region}
-                comuna={producto.usuario.comuna}
-                estado={producto.estado}
                 userId={userData ? +userData.id : null}
                 favoritos={favoritos}
               />

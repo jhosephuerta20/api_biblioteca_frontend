@@ -12,10 +12,6 @@ export async function agregarUsuario(usuario) {
         usuario.apellido +
         " email: " +
         usuario.email +
-        " region: " +
-        usuario.region +
-        " comuna: " +
-        usuario.comuna +
         " password: " +
         usuario.password
     );
@@ -24,8 +20,6 @@ export async function agregarUsuario(usuario) {
       nombre: usuario.nombre,
       apellido: usuario.apellido,
       email: usuario.email,
-      region: usuario.region,
-      comuna: usuario.comuna,
       contraseña: usuario.password,
       valoracion: 1,
     });

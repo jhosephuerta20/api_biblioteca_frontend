@@ -16,8 +16,6 @@ const SearchFilter = ({
     category: filtroCategoria ? [filtroCategoria] : [],
     priceFrom: "",
     priceTo: "",
-    estado: "",
-    comuna: "",
   });
 
   const [showComunaDropdown, setShowComunaDropdown] = useState(false);
@@ -26,9 +24,6 @@ const SearchFilter = ({
     setFilters({ ...filters, [key]: value });
   };
 
-  const filteredComunas = RegionesComunas.flatMap(
-    (region) => region.comunas
-  ).filter((com) => com.toLowerCase().includes(filters.comuna.toLowerCase()));
 
   useEffect(() => {
     setFilters((prev) => ({ ...prev, searchProduct: initialSearch }));
@@ -75,44 +70,10 @@ const SearchFilter = ({
               onFocus={() => setShowComunaDropdown(true)}
               onBlur={() => setTimeout(() => setShowComunaDropdown(false), 200)}
             />
-            {showComunaDropdown && filters.comuna && (
-              <div className="absolute w-full bg-gray-200  rounded-lg shadow-md mt-1 max-h-40 overflow-y-auto">
-                {filteredComunas.map((com) => (
-                  <div
-                    key={com}
-                    className="p-2 hover:bg-gray-100 cursor-pointer"
-                    onMouseDown={() => {
-                      handleChange("comuna", com);
-                      setShowComunaDropdown(false);
-                    }}
-                  >
-                    {com}
-                  </div>
-                ))}
-              </div>
-            )}
+            
           </div>
 
-          {/* <div className="mb-4 pb-4 border-b border-gray-200">
-            <label className="block mb-2">Precio</label>
-            <div className="flex justify-center items-center gap-2">
-              <input
-                type="number"
-                placeholder="Desde"
-                className="w-1/2 p-2 border rounded-lg"
-                value={filters.priceFrom}
-                onChange={(e) => handleChange("priceFrom", e.target.value)}
-              />
-              -
-              <input
-                type="number"
-                placeholder="Hasta"
-                className="w-1/2 p-2 border rounded-lg"
-                value={filters.priceTo}
-                onChange={(e) => handleChange("priceTo", e.target.value)}
-              />
-            </div>
-          </div> */}
+        
 
           <div className="mb-4 pb-4 border-b border-gray-200">
             <DropdownFilter
