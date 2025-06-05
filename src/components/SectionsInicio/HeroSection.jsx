@@ -52,7 +52,7 @@ const HeroSection = () => {
         <img
           src="../img/hero.jpg"
           alt=""
-          className="max-w-[550px] self-center rounded-3xl"
+          className="max-w-[550px] h-[550px] xl:h-[600px] 2xl:h-[700px] self-center rounded-3xl"
         />
         {/* <p>
           Diseñado por{" "}
