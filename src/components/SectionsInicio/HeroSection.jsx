@@ -48,11 +48,11 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="hidden w-400 lg:flex lg:flex-col text-end text-xs text-gray-500 font-mono">
+      <div className="hidden w-400  lg:flex lg:flex-col text-end text-xs text-gray-500 font-mono">
         <img
           src="../img/hero.jpg"
           alt=""
-          className="h-max w-auto rounded-3xl"
+          className="max-w-[550px] self-center rounded-3xl"
         />
         {/* <p>
           Diseñado por{" "}
